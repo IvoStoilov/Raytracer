@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\profiling tools">
+      <UniqueIdentifier>{b4ed790c-e361-48ee-9fef-3d0585331323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{ef9a849a-bba7-41b7-885f-823d6c1d080c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base\geometry">
+      <UniqueIdentifier>{48372027-2561-4850-84d4-f19ac802d0a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base\camera">
+      <UniqueIdentifier>{342a76f4-1eed-49d6-8299-7984df052782}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\profilingTools\ProfileManager.cpp">
+      <Filter>Source Files\profiling tools</Filter>
+    </ClCompile>
+    <ClCompile Include="source\base\geometry\Sphere.cpp">
+      <Filter>Source Files\base\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="source\base\MathUtil.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\base\Color.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="source\base\vec4.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\profilingTools\ProfileManager.h">
+      <Filter>Source Files\profiling tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\Board.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\State.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Ray.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\geometry\Shape.h">
+      <Filter>Source Files\base\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\geometry\Sphere.h">
+      <Filter>Source Files\base\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\MathUtil.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\Color.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="source\base\vec4.h">
+      <Filter>Source Files\base</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
