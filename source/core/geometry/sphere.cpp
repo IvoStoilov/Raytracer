@@ -8,7 +8,7 @@ Sphere::Sphere(const vec4& center, const float radius)
 
 bool Sphere::IntersectsWith(const Ray& ray, float& outT)
 {
-	vec4 rayOrigin = ray.GetPoint();
+	vec4 rayOrigin = ray.GetOrigin();
 	vec4 rayDirection = ray.GetDirection();
 
 	vec4 trace = rayOrigin - m_Center;
@@ -32,5 +32,6 @@ bool Sphere::IntersectsWith(const Ray& ray, float& outT)
 vec4 Sphere::GetNormal(const vec4& collisionPoint)
 {
 	vec4 res = collisionPoint - m_Center;
-	return res.Normalize();
+	res.Normalize();
+	return res;
 }

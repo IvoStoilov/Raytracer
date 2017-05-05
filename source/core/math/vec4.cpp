@@ -1,4 +1,12 @@
 #include "core/math/vec4.h"
+#include "core/math/mat4x4.h"
+#include <string.h>
+
+const vec4 vec4::Zero  (0.f, 0.f, 0.f, 0.f);
+const vec4 vec4::BaseI (1.f, 0.f, 0.f, 0.f);
+const vec4 vec4::BaseJ (0.f, 1.f, 0.f, 0.f);
+const vec4 vec4::BaseK (0.f, 0.f, 1.f, 0.f);
+const vec4 vec4::BaseW (0.f, 0.f, 0.f, 1.f);
 
 vec4::vec4()
 {	
@@ -23,10 +31,7 @@ vec4::vec4(const vec4& value)
 
 void vec4::operator= (const vec4& lhs)
 {
-	_data[0] = lhs._data[0];
-	_data[1] = lhs._data[1];
-	_data[2] = lhs._data[2];
-	_data[3] = lhs._data[3];
+	memcpy(_data, lhs._data, 4 * sizeof(float));
 }
 
 void vec4::operator+= (const vec4& lhs)
@@ -69,6 +74,28 @@ vec4 vec4::operator*(const float lhs) const
 				_data[3] * lhs);
 }
 
+vec4 vec4::operator*(const mat4x4& rhs) const
+{
+	mat4x4 transpose = rhs.GetTranspose();
+	return vec4(vec4::Dot(*this, transpose[0]), 
+		        vec4::Dot(*this, transpose[1]),
+				vec4::Dot(*this, transpose[2]),
+				vec4::Dot(*this, transpose[3]));
+}
+
+void vec4::operator*= (const mat4x4& rhs)
+{
+	mat4x4 transpose = rhs.GetTranspose();
+	float a = vec4::Dot(*this, transpose[0]);
+	float b = vec4::Dot(*this, transpose[1]);
+	float c = vec4::Dot(*this, transpose[2]);
+	float d = vec4::Dot(*this, transpose[3]);
+	_data[0] = a;
+    _data[1] = b;
+    _data[2] = c;
+    _data[3] = d;
+}
+
 float& vec4::operator[] (uint32_t i)
 {
 	return _data[i];
@@ -89,7 +116,16 @@ float vec4::GetLength() const
 	return sqrt(SquareLength());
 }
 
-vec4 vec4::Normalize() const
+void vec4::Normalize()
+{
+	float l = GetLength();
+	_data[0] /= l;
+	_data[1] /= l;
+	_data[2] /= l;
+	_data[3] /= l;
+}
+
+vec4 vec4::GetNormalized() const
 {
 	float l = GetLength();
 	return this->operator/(l);

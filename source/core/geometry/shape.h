@@ -1,6 +1,6 @@
 #pragma once
 #include "core/gfx/color.h"
-#include "Ray.h"
+#include "core/camera/ray.h"
 
 class Shape
 {
