@@ -17,6 +17,7 @@
 
 #include "core/constants.h"
 
+#include "window\sdl\sdlwindow.h"
 using namespace std;
 
 SDL_Window* m_window;
@@ -54,7 +55,7 @@ bool init(const char* title, int x_pos, int y_pos, int width, int height, int wi
 	return false;
 }
 
-int main()
+int main(int argc, char** arvg)
 {
 	//Camera c;
 	//c.SetPosition(vec4(35, 60, 20, 1));
@@ -106,7 +107,7 @@ int main()
 	//		out << "\n";
 	//	}
 	//}
-	double frameStart = 0.f;
+	/*double frameStart = 0.f;
 	double frameTime = 0.f;
 	float DELAY_TIME = 16.f;
 
@@ -125,7 +126,15 @@ int main()
 		{
 			SDL_Delay((int)DELAY_TIME - frameTime);
 		}
-	}
+	}*/
+   
+    SDLWindow win;
+    win.Initialize("Raytracer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-	system("pause");
+    while (win.IsRunning())
+    {
+        win.Update();
+    }
+
+	return 1;
 }

@@ -25,6 +25,12 @@
     <Filter Include="source\core\camera">
       <UniqueIdentifier>{f4c42bce-fb4c-4626-afb2-7e985e1327b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\window">
+      <UniqueIdentifier>{5483104a-8f45-4d84-a691-ae41add8a5fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\window\sdl">
+      <UniqueIdentifier>{7de94796-458a-4575-a464-1fef52ba252d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\core\geometry\shape.h">
@@ -66,6 +72,9 @@
     <ClInclude Include="..\source\core\geometry\plane.h">
       <Filter>source\core\geometry</Filter>
     </ClInclude>
+    <ClInclude Include="..\source\window\sdl\sdlwindow.h">
+      <Filter>source\window\sdl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\core\geometry\sphere.cpp">
@@ -94,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="..\source\core\geometry\plane.cpp">
       <Filter>source\core\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\window\sdl\sdlwindow.cpp">
+      <Filter>source\window\sdl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
