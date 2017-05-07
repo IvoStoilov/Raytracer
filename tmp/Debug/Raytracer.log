@@ -1,10 +1,8 @@
-﻿Build started 6.5.2017 г. 18:45:21.
+﻿Build started 7.5.2017 г. 16:24:05.
      1>Project "C:\Users\Ivo\Desktop\Raytracer\projects\Raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Ivo\Desktop\Raytracer\/source /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\\" /Fd"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\main.cpp ..\source\window\sdl\sdlwindow.cpp
-         sdlwindow.cpp
-         main.cpp
-         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Ivo\Desktop\Raytracer\/source /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\\" /Fd"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\core\geometry\plane.cpp
+         plane.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Ivo\Desktop\Raytracer\extern\sdl\lib\x64 SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.pdb" /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.lib" /MACHINE:X86 C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\camera.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\plane.obj
@@ -15,10 +13,12 @@
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\vec4.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\main.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\profilemanager.obj
+         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\raytracingrenderer.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\sdlwindow.obj
+         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\world.obj
          Raytracer.vcxproj -> C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.exe
      1>Done Building Project "C:\Users\Ivo\Desktop\Raytracer\projects\Raytracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.99
+Time Elapsed 00:00:00.41

@@ -24,7 +24,9 @@
     <ClInclude Include="..\source\core\math\mathutil.h" />
     <ClInclude Include="..\source\core\math\vec4.h" />
     <ClInclude Include="..\source\profilingtools\profilemanager.h" />
+    <ClInclude Include="..\source\raytracingrenderer.h" />
     <ClInclude Include="..\source\window\sdl\sdlwindow.h" />
+    <ClInclude Include="..\source\world.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\core\camera\camera.cpp" />
@@ -36,7 +38,9 @@
     <ClCompile Include="..\source\core\math\vec4.cpp" />
     <ClCompile Include="..\source\main.cpp" />
     <ClCompile Include="..\source\profilingtools\profilemanager.cpp" />
+    <ClCompile Include="..\source\raytracingrenderer.cpp" />
     <ClCompile Include="..\source\window\sdl\sdlwindow.cpp" />
+    <ClCompile Include="..\source\world.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{23174C02-CE12-4DE8-98EB-28147E2E54EE}</ProjectGuid>
@@ -99,16 +103,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)/extern/sdl/include;$(SolutionDir)/source</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/source</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>extern/sdl/SDL %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>$(SolutionDir)extern\sdl\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <SubSystem>NotSet</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

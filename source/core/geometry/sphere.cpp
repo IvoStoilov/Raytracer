@@ -8,25 +8,30 @@ Sphere::Sphere(const vec4& center, const float radius)
 
 bool Sphere::IntersectsWith(const Ray& ray, float& outT)
 {
-	vec4 rayOrigin = ray.GetOrigin();
-	vec4 rayDirection = ray.GetDirection();
+    vec4 H = ray.GetOrigin() - m_Center;
+    float A = 1.f; // ray length = 1;
+    float B = 2 * vec4::Dot(H, ray.GetDirection());
+    float C = H.GetLengthSqr() - m_Radius * m_Radius;
 
-	vec4 trace = rayOrigin - m_Center;
-	
-	const float b = 2 * vec4::Dot(trace, rayDirection);
-	const float c = vec4::Dot(trace, trace) - m_Radius * m_Radius;
-	
-	float discriminant = b * b - 4 * c;
-	discriminant = sqrt(discriminant);
+    double discr = B * B - 4 * A * C;
+    if (discr < 0.f) return false;
+    
+    double p1 = (-B - sqrt(discr)) / 2 * A;
+    double p2 = (-B + sqrt(discr)) / 2 * A;
 
-	if (popLesserWithEpsilon(discriminant, 0.0f))
-		return false;
+    if (p1 > 0.f)
+    {
+        outT = p1;
+        return true;
+    }
+    else if (p2 > 0.f)
+    {
+        outT = p2;
+        return true;
+    }
 
-	const float t1 = -b - discriminant;
-	const float t2 = -b + discriminant;
+    return false;
 
-	outT = (t1 < t2 && t1 > 0) ? t1 : t2;
-	return true;
 }
 
 vec4 Sphere::GetNormal(const vec4& collisionPoint)
