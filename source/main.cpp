@@ -2,15 +2,14 @@
 
 #include <iostream>
 #include <fstream>
+
 #include "profilingtools/profilemanager.h"
 
 #include "core/camera/camera.h"
 
 #include "core/gfx/color.h"
-
-#include "core/math/mat4x4.h"
-#include "core/math/vec4.h"
-#include "core/math/mathutil.h"
+#include "core/gfx/shaders/checkershader.h"
+#include "core/gfx/shaders/baseshader.h"
 
 #include "core/geometry/sphere.h"
 #include "core/geometry/plane.h"
@@ -26,17 +25,25 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
+    Object objSphere;
     Sphere s (vec4(10, 10, 10, 1), 1.f);
-    s.SetColor(Color(1.f, 0.f, 0.f, 0.f));
+    Shader baseShader;
+    objSphere.SetGeometry(&s);
+    objSphere.SetShader(&baseShader);
+
+    Object objPlane;
     Plane p(vec4(0.f, 0.f, 1.f, 0.f), 0);
-    p.SetColor(Color(1.f, 1.f, 0.f));
+    CheckerShader cs_shader(Color(1.f, 1.f, 0.f, 0.f), Color(0.f, 0.f, 1.f, 0.f));
+    objPlane.SetGeometry(&p);
+    objPlane.SetShader(&cs_shader);
+
     Sphere light(vec4(0.f, 10.f, 100.f, 1.f), 1.f);
 
     World world;
     world.InitWorld();
-    world.AddObject(&s);
-    world.AddObject(&p);
-
+    world.AddObject(&objPlane);
+    world.AddObject(&objSphere);
+    
     SDLWindow win;
     win.Initialize("Raytracer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT);
 

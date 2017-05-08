@@ -15,6 +15,7 @@ public:
 
 public:
    Color();
+   Color(const Color& other);
    Color(const vec4& rgbaVector);
    Color(float r, float g, float b);
    Color(float r, float g, float b, float a);

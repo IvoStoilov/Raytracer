@@ -31,11 +31,11 @@
     <Filter Include="source\window\sdl">
       <UniqueIdentifier>{7de94796-458a-4575-a464-1fef52ba252d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\core\gfx\shaders">
+      <UniqueIdentifier>{57dcd5e0-743e-4360-bd14-084f002ece75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\source\core\geometry\shape.h">
-      <Filter>source\core\geometry</Filter>
-    </ClInclude>
     <ClInclude Include="..\source\core\geometry\sphere.h">
       <Filter>source\core\geometry</Filter>
     </ClInclude>
@@ -81,6 +81,15 @@
     <ClInclude Include="..\source\world.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="..\source\core\geometry\geometry.h">
+      <Filter>source\core\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\core\gfx\shaders\baseshader.h">
+      <Filter>source\core\gfx\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\source\core\gfx\shaders\checkershader.h">
+      <Filter>source\core\gfx\shaders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\core\geometry\sphere.cpp">
@@ -118,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="..\source\world.cpp">
       <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\core\gfx\shaders\checkershader.cpp">
+      <Filter>source\core\gfx\shaders</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

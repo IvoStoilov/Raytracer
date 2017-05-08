@@ -15,6 +15,11 @@ Color::Color()
    m_ColorVector[3] = 0;
 }
 
+Color::Color(const Color& color)
+{
+    m_ColorVector = color.m_ColorVector;
+}
+
 Color::Color(float r, float g, float b, float a)
 {
    m_ColorVector[0] = r;

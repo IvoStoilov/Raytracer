@@ -17,9 +17,11 @@
     <ClInclude Include="..\source\core\containers\board.h" />
     <ClInclude Include="..\source\core\containers\state.h" />
     <ClInclude Include="..\source\core\geometry\plane.h" />
-    <ClInclude Include="..\source\core\geometry\shape.h" />
+    <ClInclude Include="..\source\core\geometry\geometry.h" />
     <ClInclude Include="..\source\core\geometry\sphere.h" />
     <ClInclude Include="..\source\core\gfx\color.h" />
+    <ClInclude Include="..\source\core\gfx\shaders\baseshader.h" />
+    <ClInclude Include="..\source\core\gfx\shaders\checkershader.h" />
     <ClInclude Include="..\source\core\math\mat4x4.h" />
     <ClInclude Include="..\source\core\math\mathutil.h" />
     <ClInclude Include="..\source\core\math\vec4.h" />
@@ -33,6 +35,7 @@
     <ClCompile Include="..\source\core\geometry\plane.cpp" />
     <ClCompile Include="..\source\core\geometry\sphere.cpp" />
     <ClCompile Include="..\source\core\gfx\color.cpp" />
+    <ClCompile Include="..\source\core\gfx\shaders\checkershader.cpp" />
     <ClCompile Include="..\source\core\math\mat4x4.cpp" />
     <ClCompile Include="..\source\core\math\mathutil.cpp" />
     <ClCompile Include="..\source\core\math\vec4.cpp" />
