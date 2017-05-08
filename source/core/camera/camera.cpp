@@ -45,6 +45,15 @@ Ray Camera::GetScreenRay(uint32_t x, uint32_t y)
    return Ray(m_Position, rayDirection);
 }
 
+vec4 Camera::GetSight() const
+{
+    //TODO (istoilov) : Fix this after Transform is implemented
+    vec4 middle = m_TopLeft + (m_TopRight - m_TopLeft) * (0.5f / SCREEN_WIDTH)
+        + (m_BottomRight - m_TopRight) * (0.5f / SCREEN_HEIGHT);
+
+    return (middle - m_Position).GetNormalized();
+}
+
 Camera::Camera() :
    m_Position(vec4(0.f, 0.f, 0.f, 1.f)),
    m_Pitch(0.f),

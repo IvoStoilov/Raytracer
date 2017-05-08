@@ -27,6 +27,7 @@
     <ClInclude Include="..\source\core\math\vec4.h" />
     <ClInclude Include="..\source\profilingtools\profilemanager.h" />
     <ClInclude Include="..\source\raytracingrenderer.h" />
+    <ClInclude Include="..\source\window\sdl\sdlinputhandler_camera.h" />
     <ClInclude Include="..\source\window\sdl\sdlwindow.h" />
     <ClInclude Include="..\source\world.h" />
   </ItemGroup>
@@ -42,6 +43,7 @@
     <ClCompile Include="..\source\main.cpp" />
     <ClCompile Include="..\source\profilingtools\profilemanager.cpp" />
     <ClCompile Include="..\source\raytracingrenderer.cpp" />
+    <ClCompile Include="..\source\window\sdl\sdlinputhandler_camera.cpp" />
     <ClCompile Include="..\source\window\sdl\sdlwindow.cpp" />
     <ClCompile Include="..\source\world.cpp" />
   </ItemGroup>

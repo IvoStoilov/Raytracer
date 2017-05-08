@@ -1,29 +1,65 @@
-﻿Build started 8.5.2017 г. 18:22:15.
-     1>Project "C:\Users\Ivo\Desktop\Raytracer\projects\Raytracer.vcxproj" on node 2 (Build target(s)).
+﻿Build started 8.5.2017 г. 20:53:57 ч..
+     1>Project "D:\Users\Ivo\Desktop\Projects\C++\Raytracer\projects\Raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Ivo\Desktop\Raytracer\/source /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\\" /Fd"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\Users\Ivo\Desktop\Projects\C++\Raytracer\/source /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\\" /Fd"D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\core\camera\camera.cpp ..\source\core\geometry\plane.cpp ..\source\core\geometry\sphere.cpp ..\source\core\gfx\color.cpp ..\source\core\gfx\shaders\checkershader.cpp ..\source\core\math\mat4x4.cpp ..\source\core\math\mathutil.cpp ..\source\core\math\vec4.cpp ..\source\main.cpp ..\source\profilingtools\profilemanager.cpp ..\source\raytracingrenderer.cpp ..\source\window\sdl\sdlwindow.cpp ..\source\world.cpp
+         world.cpp
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\world.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\world.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+         sdlwindow.cpp
+         raytracingrenderer.cpp
+         profilemanager.cpp
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\profilingtools\profilemanager.cpp(8): warning C4244: '=' : conversion from 'uint64_t' to 'double', possible loss of data
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\profilingtools\profilemanager.cpp(11): warning C4244: '=' : conversion from 'uint64_t' to 'double', possible loss of data
          main.cpp
-     1>c:\users\ivo\desktop\raytracer\source\core\gfx\shaders\checkershader.h(4): warning C4099: 'IntersectionInfo' : type name first seen using 'struct' now seen using 'class'
-                 c:\users\ivo\desktop\raytracer\source\core\geometry\geometry.h(7) : see declaration of 'IntersectionInfo'
-     1>c:\users\ivo\desktop\raytracer\source\main.cpp(61): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\ivo\desktop\raytracer\source\main.cpp(75): warning C4244: 'argument' : conversion from 'double' to 'Uint32', possible loss of data
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\gfx\shaders\checkershader.h(4): warning C4099: 'IntersectionInfo' : type name first seen using 'struct' now seen using 'class'
+                 d:\users\ivo\desktop\projects\c++\raytracer\source\core\geometry\geometry.h(7) : see declaration of 'IntersectionInfo'
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\main.cpp(61): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\main.cpp(75): warning C4244: 'argument' : conversion from 'double' to 'Uint32', possible loss of data
+         vec4.cpp
+         mathutil.cpp
+         mat4x4.cpp
+         checkershader.cpp
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\gfx\shaders\checkershader.h(4): warning C4099: 'IntersectionInfo' : type name first seen using 'struct' now seen using 'class'
+                 d:\users\ivo\desktop\projects\c++\raytracer\source\core\geometry\geometry.h(7) : see declaration of 'IntersectionInfo'
+         color.cpp
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\gfx\color.cpp(67): warning C4244: 'initializing' : conversion from 'float' to 'uint32_t', possible loss of data
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\gfx\color.cpp(69): warning C4244: 'initializing' : conversion from 'float' to 'uint32_t', possible loss of data
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\gfx\color.cpp(71): warning C4244: 'initializing' : conversion from 'float' to 'uint32_t', possible loss of data
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\gfx\color.cpp(73): warning C4244: 'initializing' : conversion from 'float' to 'uint32_t', possible loss of data
+         sphere.cpp
+     1>d:\users\ivo\desktop\projects\c++\raytracer\source\core\geometry\sphere.cpp(27): warning C4244: 'argument' : conversion from 'double' to 'const float', possible loss of data
+         plane.cpp
+         camera.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Ivo\Desktop\Raytracer\extern\sdl\lib\x64 SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.pdb" /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.lib" /MACHINE:X86 C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\camera.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\plane.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\sphere.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\color.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\checkershader.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\mat4x4.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\mathutil.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\vec4.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\main.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\profilemanager.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\raytracingrenderer.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\sdlwindow.obj
-         C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\world.obj
-         Raytracer.vcxproj -> C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.exe
-     1>Done Building Project "C:\Users\Ivo\Desktop\Raytracer\projects\Raytracer.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\bin\Debug\Raytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:D:\Users\Ivo\Desktop\Projects\C++\Raytracer\extern\sdl\lib\x64 SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\bin\Debug\Raytracer.pdb" /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\bin\Debug\Raytracer.lib" /MACHINE:X86 D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\camera.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\plane.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\sphere.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\color.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\checkershader.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\mat4x4.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\mathutil.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\vec4.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\main.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\profilemanager.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\raytracingrenderer.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\sdlwindow.obj
+         D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\tmp\Debug\world.obj
+         LINK : D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\bin\Debug\Raytracer.exe not found or not built by the last incremental link; performing full link
+     1>camera.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>color.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>mat4x4.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>mathutil.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>vec4.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>main.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>profilemanager.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>raytracingrenderer.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>world.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>MSVCRTD.lib(atonexit.obj) : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>MSVCRTD.lib(cpu_disp.obj) : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+         Raytracer.vcxproj -> D:\Users\Ivo\Desktop\Projects\C++\Raytracer\\bin\Debug\Raytracer.exe
+     1>Done Building Project "D:\Users\Ivo\Desktop\Projects\C++\Raytracer\projects\Raytracer.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.78
+Time Elapsed 00:00:04.84

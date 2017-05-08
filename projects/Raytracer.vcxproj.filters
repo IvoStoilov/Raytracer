@@ -90,6 +90,9 @@
     <ClInclude Include="..\source\core\gfx\shaders\checkershader.h">
       <Filter>source\core\gfx\shaders</Filter>
     </ClInclude>
+    <ClInclude Include="..\source\window\sdl\sdlinputhandler_camera.h">
+      <Filter>source\window\sdl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\core\geometry\sphere.cpp">
@@ -130,6 +133,9 @@
     </ClCompile>
     <ClCompile Include="..\source\core\gfx\shaders\checkershader.cpp">
       <Filter>source\core\gfx\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\window\sdl\sdlinputhandler_camera.cpp">
+      <Filter>source\window\sdl</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
