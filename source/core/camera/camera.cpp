@@ -6,24 +6,27 @@
 
 #include "core/constants.h"
 
-void Camera::InitializeCamera()
+void Camera::InitCamera()
 {
-   float x2d = -m_AspectRatio;
-   float y2d = +1;
+    float x2d = -m_AspectRatio;
+    float y2d = +1;
 
-   float wantedAngle = MathUtil::ToRads(m_FOV / 2.f);
-   float wantedLength = tan(wantedAngle);
-   float currentLength = sqrt(MathUtil::Sqr(m_AspectRatio) + MathUtil::Sqr(1.f));
-   
-   float ratio = wantedLength / currentLength;
+    float wantedAngle = MathUtil::ToRads(m_FOV / 2.f);
+    float wantedLength = tan(wantedAngle);
+    float currentLength = sqrt(MathUtil::Sqr(m_AspectRatio) + MathUtil::Sqr(1.f));
 
-   m_TopLeft	  = vec4(+ratio * x2d, +ratio * y2d, 1.f, 0.f);
-   m_TopRight	  = vec4(-ratio * x2d, +ratio * y2d, 1.f, 0.f);
-   m_BottomRight = vec4(-ratio * x2d, -ratio * y2d, 1.f, 0.f);
+    float ratio = wantedLength / currentLength;
 
+    m_TopLeft = vec4(+ratio * x2d, +ratio * y2d, 1.f, 0.f);
+    m_TopRight = vec4(-ratio * x2d, +ratio * y2d, 1.f, 0.f);
+    m_BottomRight = vec4(-ratio * x2d, -ratio * y2d, 1.f, 0.f);
+}
+
+void Camera::FrameBegin()
+{
    mat4x4 rotation = mat4x4::GetRotateXAxisMatrix(MathUtil::ToRads(m_Pitch))*
-                 mat4x4::GetRotateYAxisMatrix(MathUtil::ToRads(m_Yaw  ))*
-                 mat4x4::GetRotateZAxisMatrix(MathUtil::ToRads(m_Roll ));
+       mat4x4::GetRotateYAxisMatrix(MathUtil::ToRads(m_Yaw))*
+       mat4x4::GetRotateZAxisMatrix(MathUtil::ToRads(m_Roll));
 
    m_TopLeft     *= rotation;
    m_TopRight    *= rotation;

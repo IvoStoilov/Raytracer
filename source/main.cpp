@@ -16,7 +16,8 @@
 
 #include "core/constants.h"
 
-#include "window\sdl\sdlwindow.h"
+#include "window/sdl/sdlwindow.h"
+#include "window/sdl/sdlinputhandler_camera.h"
 #include "raytracingrenderer.h"
 #include "world.h"
 
@@ -44,6 +45,8 @@ int main(int argc, char** argv)
     world.AddObject(&objPlane);
     world.AddObject(&objSphere);
     
+    InputHandler_Camera input(world.GetCamera());
+
     SDLWindow win;
     win.Initialize("Raytracer", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT);
 
@@ -58,9 +61,12 @@ int main(int argc, char** argv)
     {
         Uint32 currentTimeTicks = SDL_GetTicks();
 
-        float deltaTime = (currentTimeTicks - frameStart) * 0.001f;
+        float dt = (currentTimeTicks - frameStart) * 0.001f;
 
         frameStart = currentTimeTicks;
+
+        input.Update(dt);
+        world.GetCamera()->FrameBegin();
 
         renderer.Render();
 

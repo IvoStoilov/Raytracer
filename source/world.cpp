@@ -14,7 +14,7 @@ void World::InitWorld()
     m_Camera->SetFOV(90);
     m_Camera->SetPitch(-90);
     m_Camera->SetYaw(120);
-    m_Camera->InitializeCamera();
+    m_Camera->InitCamera();
 }
 
 World::~World()

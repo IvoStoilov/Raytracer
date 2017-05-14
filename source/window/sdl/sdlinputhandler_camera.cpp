@@ -36,12 +36,22 @@ void InputHandler_Camera::UpdateSDLEvents()
 
 void InputHandler_Camera::Update(float dt)
 {
+    UpdateSDLEvents();
+
     vec4 sight = m_Camera->GetSight();
     vec4 newPos = m_Camera->GetPosition() + sight * m_MoveSpeed * dt * m_MoveForwardPressed 
                                           + sight * -1 * m_MoveSpeed * dt * m_MoveBackwardPressed;
     m_Camera->SetPosition(newPos);
 
-    //TODO finish this
+
+    float newYaw = m_RotationSpeed * dt * m_RotateLeftPressed + -m_RotationSpeed * dt * m_RotateRightPressed;
+
+    m_Camera->AddYaw(newYaw);
+
+    float newPitch = m_RotationSpeed * dt * m_RotateUpPressed + -m_RotationSpeed * dt * m_RotateDownPressed;
+
+    m_Camera->AddPitch(newPitch);
+
 }
 
 
