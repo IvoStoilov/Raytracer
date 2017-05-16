@@ -98,7 +98,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)extern\sdl\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <EntryPointSymbol>main</EntryPointSymbol>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

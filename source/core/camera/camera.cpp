@@ -22,6 +22,28 @@ void Camera::InitCamera()
     m_BottomRight = vec4(-ratio * x2d, -ratio * y2d, 1.f, 0.f);
 }
 
+void Camera::RotatePitch(float deltaDegree)
+{
+    mat4x4 rotation = mat4x4::GetRotateXAxisMatrix(MathUtil::ToRads(deltaDegree));
+    
+    m_TopLeft *= rotation;
+    m_TopRight *= rotation;
+    m_BottomRight *= rotation;
+
+    m_Pitch += deltaDegree;
+}
+
+void Camera::RotateYaw(float deltaDegree)
+{
+    mat4x4 rotation = mat4x4::GetRotateYAxisMatrix(MathUtil::ToRads(deltaDegree));
+
+    m_TopLeft *= rotation;
+    m_TopRight *= rotation;
+    m_BottomRight *= rotation;
+
+    m_Yaw += deltaDegree;
+}
+
 void Camera::FrameBegin()
 {
    mat4x4 rotation = mat4x4::GetRotateXAxisMatrix(MathUtil::ToRads(m_Pitch))*

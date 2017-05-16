@@ -1,18 +1,19 @@
-﻿Build started 9.5.2017 г. 20:56:12.
+﻿Build started 14.5.2017 г. 17:34:42.
      1>Project "C:\Users\Ivo\Desktop\Raytracer\projects\Raytracer.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Ivo\Desktop\Raytracer\/source /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ivo\Desktop\Raytracer\\tmp\Release\\" /Fd"C:\Users\Ivo\Desktop\Raytracer\\tmp\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\core\camera\camera.cpp ..\source\main.cpp ..\source\raytracingrenderer.cpp ..\source\window\sdl\sdlinputhandler_camera.cpp ..\source\world.cpp
-         camera.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Ivo\Desktop\Raytracer\/source /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ivo\Desktop\Raytracer\\tmp\Release\\" /Fd"C:\Users\Ivo\Desktop\Raytracer\\tmp\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\main.cpp ..\source\window\sdl\sdlinputhandler_camera.cpp
          main.cpp
      1>c:\users\ivo\desktop\raytracer\source\core/gfx/shaders/checkershader.h(4): warning C4099: 'IntersectionInfo' : type name first seen using 'struct' now seen using 'class'
                  c:\users\ivo\desktop\raytracer\source\core/geometry/geometry.h(7) : see declaration of 'IntersectionInfo'
      1>..\source\main.cpp(64): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>..\source\main.cpp(81): warning C4244: 'argument' : conversion from 'double' to 'Uint32', possible loss of data
-         raytracingrenderer.cpp
+     1>..\source\main.cpp(80): warning C4244: 'argument' : conversion from 'double' to 'Uint32', possible loss of data
          sdlinputhandler_camera.cpp
-         world.cpp
-     1>..\source\world.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>..\source\world.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>..\source\window\sdl\sdlinputhandler_camera.cpp(10): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>..\source\window\sdl\sdlinputhandler_camera.cpp(11): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>..\source\window\sdl\sdlinputhandler_camera.cpp(12): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>..\source\window\sdl\sdlinputhandler_camera.cpp(13): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>..\source\window\sdl\sdlinputhandler_camera.cpp(14): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
+     1>..\source\window\sdl\sdlinputhandler_camera.cpp(15): warning C4800: 'const Uint8' : forcing value to bool 'true' or 'false' (performance warning)
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ivo\Desktop\Raytracer\\bin\Release\Raytracer.exe" /NOLOGO /LIBPATH:C:\Users\Ivo\Desktop\Raytracer\extern\sdl\lib\x64 SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Release\Raytracer.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Release\Raytracer.lib" /MACHINE:X86 /SAFESEH C:\Users\Ivo\Desktop\Raytracer\\tmp\Release\camera.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Release\plane.obj
@@ -37,4 +38,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.30
+Time Elapsed 00:00:00.97

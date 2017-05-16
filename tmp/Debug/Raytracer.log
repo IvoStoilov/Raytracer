@@ -1,21 +1,7 @@
-﻿Build started 9.5.2017 г. 20:55:51.
+﻿Build started 14.5.2017 г. 17:31:22.
      1>Project "C:\Users\Ivo\Desktop\Raytracer\projects\Raytracer.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\Ivo\Desktop\Raytracer\/source /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\\" /Fd"C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\core\camera\camera.cpp ..\source\main.cpp ..\source\raytracingrenderer.cpp ..\source\window\sdl\sdlinputhandler_camera.cpp ..\source\world.cpp
-         world.cpp
-     1>c:\users\ivo\desktop\raytracer\source\world.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-     1>c:\users\ivo\desktop\raytracer\source\world.cpp(5): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-         sdlinputhandler_camera.cpp
-         raytracingrenderer.cpp
-         main.cpp
-     1>c:\users\ivo\desktop\raytracer\source\core\gfx\shaders\checkershader.h(4): warning C4099: 'IntersectionInfo' : type name first seen using 'struct' now seen using 'class'
-                 c:\users\ivo\desktop\raytracer\source\core\geometry\geometry.h(7) : see declaration of 'IntersectionInfo'
-     1>c:\users\ivo\desktop\raytracer\source\main.cpp(64): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\ivo\desktop\raytracer\source\main.cpp(81): warning C4244: 'argument' : conversion from 'double' to 'Uint32', possible loss of data
-         camera.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Ivo\Desktop\Raytracer\extern\sdl\lib\x64 SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.pdb" /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.lib" /MACHINE:X86 C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\camera.obj
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Ivo\Desktop\Raytracer\extern\sdl\lib\x64 SDL2.lib SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ivo\Desktop\Raytracer\\bin\Debug\Raytracer.lib" /MACHINE:X86 C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\camera.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\plane.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\sphere.obj
          C:\Users\Ivo\Desktop\Raytracer\\tmp\Debug\color.obj
@@ -34,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.21
+Time Elapsed 00:00:00.30

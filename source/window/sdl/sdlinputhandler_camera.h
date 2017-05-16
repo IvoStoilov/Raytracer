@@ -13,7 +13,7 @@ class InputHandler_Camera : public InputHandler
 public:
     InputHandler_Camera(Camera* c) :
         m_Camera(c),
-        m_MoveSpeed(10.f),
+        m_MoveSpeed(50.f),
         m_RotationSpeed(5.f)
     {
         m_MoveForwardPressed  = false;

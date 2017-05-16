@@ -1,6 +1,7 @@
 #pragma once
 
 #include "core/math/vec4.h"
+#include "core/math/mat4x4.h"
 #include "core/camera/ray.h"
 
 class Camera
@@ -16,13 +17,17 @@ public:
    inline vec4 GetPosition() const { return m_Position; }
 
    inline void SetYaw(const float degree)  { m_Yaw = degree; }
-   inline void AddYaw(const float degree)  { m_Yaw += degree; }
+   void RotateYaw(const float deltaDegree);
+
    inline void SetPitch(const float degree){ m_Pitch = degree; }
-   inline void AddPitch(const float degree){ m_Pitch += degree; }
+   void RotatePitch(const float deltaDegree);
+
    inline void SetRoll(const float degree) { m_Pitch = degree; }
    inline void SetFOV(const float degree)  { m_FOV = degree; }
+
    inline void SetAspectRation(const float value) { m_AspectRatio = value; }
    inline void SetPosition(const vec4& position) { m_Position = position; }
+
    //In degrees
    inline float GetYaw()	const { return m_Yaw; }
    //In degrees
@@ -35,6 +40,8 @@ private:
    vec4 m_BottomRight;
 
    vec4 m_Position;
+
+   mat4x4 m_Transform;
 
 // TODO : istoilov - Move to seperate Data class after implementing serealizing
    float m_Yaw;	// Stored in Degreese

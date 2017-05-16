@@ -66,8 +66,7 @@ int main(int argc, char** argv)
         frameStart = currentTimeTicks;
 
         input.Update(dt);
-        world.GetCamera()->FrameBegin();
-
+        
         renderer.Render();
 
         win.Update();
